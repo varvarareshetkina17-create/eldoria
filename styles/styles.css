@@ -11,7 +11,7 @@ body {
   text-decoration: none; /* Убираем стандартное подчёркивание у ссылки */
   cursor: pointer;       /* Меняем курсор на указатель, чтобы было понятно, что элемент кликабельный */
 }
-.header {
+.hero__header {
   z-index: 100;
   background: #4E653D;
   padding: 20px 0;
