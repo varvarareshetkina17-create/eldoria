@@ -1,232 +1,183 @@
-/* ========== ДОБАВЛЕНО: фон для всех страниц сайта ========== */
+/* ---------- Цветовая палитра ---------- */
+
+:root{
+  --coral: #7D2826;
+  --candle: #EFE9D7;
+  --leaf: #898861;
+  --juniper: #343723;
+}
+
+
+/* ---------- Фон сайта ---------- */
+
 body {
-  background-color: #EBD1B7;  
+  background-color: var(--candle);
   margin: 0;
   padding: 0;
   min-height: 100vh;
 }
 
+
+/* ---------- Шапка ---------- */
+
+.hero__header { 
+  z-index: 100; 
+  background: var(--juniper); 
+  padding: 20px 0; 
+  position: relative; 
+} 
+
+.hero__title { 
+  z-index: 150; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: var(--candle); 
+  font-weight: 800; 
+  font-size: 26px; 
+} 
+
+
+/* ---------- Галерея ---------- */
+
 .gallery__link {
-  display: block;        /* Делаем ссылку блочным элементом, чтобы она занимала всю область вокруг фото */
-  text-decoration: none; /* Убираем стандартное подчёркивание у ссылки */
-  cursor: pointer;       /* Меняем курсор на указатель, чтобы было понятно, что элемент кликабельный */
-}
-.hero__header {
-  z-index: 100;
-  background: #3A4D4C;
-  padding: 20px 0;
-  position: relative;
-}
-
-.hero__title {
-  z-index: 150;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #E8D1B7;
-  font-weight: 800;
-  font-size: 26px;
-}
-
-/* Секция с фотографиями */
-.gallery-section {
-  background-color: #E8D1B7;
-  width: 100%;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-/* Секция с баннером */
-.banner-section {
-  background-color: #E8D1B7;
-  width: 100%;
-  margin: 0;
-  padding: 0 20px 40px 20px;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.hero__text2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #3A4D4C;
-  font-weight: 800;
-  font-size: 18px;
-  text-align: center;
-  word-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-  margin: 0;
-  padding: 0;
-}
-
-.hero__banner {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  background-color: #DD8A66;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-
-/*.footer__fon {
-  background-color: #697E50;
-  height: 100px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-*/
-img {
-  max-width: 100%;
-  height: auto;
   display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
+.gallery-section { 
+  background-color: var(--candle); 
+  width: 100%; 
+  margin: 0; 
+  padding: 20px; 
+  display: flex; 
+  justify-content: center; 
+  box-sizing: border-box; 
+} 
+
+
+.gallery { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 0 auto; 
+} 
+
+
+.gallery__img { 
+  width: 100%; 
+  height: 200px; 
+  object-position: center 10%; 
+  object-fit: cover; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+} 
+
+
+.gallery__img:hover { 
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+}
+
+
+/* ---------- Баннер ---------- */
+
+.banner-section { 
+  background-color: var(--candle); 
+  width: 100%; 
+  margin: 0; 
+  padding: 0 20px 40px 20px; 
+  display: flex; 
+  justify-content: center; 
+  box-sizing: border-box; 
+} 
+
+
+.hero__banner { 
+  position: relative; 
+  width: 100%; 
+  max-width: 600px; 
+  background-color: var(--coral); 
+  padding: 30px; 
+  border-radius: 12px; 
+  box-shadow: 0 18px 35px rgba(0,0,0,0.25); 
+} 
+
+
+.hero__text2 { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: var(--candle); 
+  font-weight: 800; 
+  font-size: 18px; 
+  text-align: center; 
+  margin: 0; 
+}
+
+
+/* ---------- Страница персонажа ---------- */
+
+.personage-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--leaf);
+  border-radius: 12px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
+
+.personage-photo {
   width: 100%;
-  margin: 0 auto;
+  max-width: 400px;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.gallery__img {
-  width: 100%;
-  height: 200px;
-  object-position: center 10%;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-sizing: border-box;
+
+.personage-name {
+  text-align: center;
+  color: var(--candle);
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
-.gallery__img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+.personage-info {
+  color: var(--juniper);
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
 }
 
-/* Адаптивность для телефонов */
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-  }
-  
-  .gallery__img {
-    height: 150px;
-  }
-  
-  .hero__title {
-    font-size: 22px;
-  }
-  
-  .hero__text2 {
-    font-size: 16px;
-  }
-  
-  .hero__banner {
-    padding: 20px;
-  }
-  
-  .gallery-section {
-    padding: 15px;
-  }
-  
-  .banner-section {
-    padding: 0 15px 30px 15px;
-  }
+
+/* ---------- Кнопка ---------- */
+
+.button-container {
+  text-align: center;
+  margin-top: 30px;
 }
 
-@media (max-width: 480px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 10px;
-  }
-  
-  .gallery__img {
-    height: 120px;
-  }
-  
-  .hero__title {
-    font-size: 20px;
-  }
-  
-  .hero__text2 {
-    font-size: 14px;
-  }
-  
-  .hero__banner {
-    padding: 15px;
-  }
+.back-button {
+  display: inline-block;
+  background-color: var(--juniper);
+  color: var(--candle);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: 0.3s;
 }
-/* Основной контейнер с информацией о персонаже */
-    .personage-container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #DD8A66;
-      border-radius: 12px;
-      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* Стиль для фотографии персонажа на отдельной странице */
-    .personage-photo {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 12px;
-      margin: 0 auto 20px;
-      display: block;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* Имя персонажа */
-    .personage-name {
-      text-align: center;
-      color: #E8D1B7;
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-    
-    /* Описание/информация о персонаже */
-    .personage-info {
-      color: #2C251C;
-      font-size: 18px;
-      line-height: 1.6;
-      text-align: center;
-    }
-    
-    /* Кнопка возврата на главную страницу */
-    .back-button {
-      display: inline-block;
-      background-color: #3A4D4C;
-      color: #E8D1B7;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-    
-    /* Эффект при наведении на кнопку возврата */
-    .back-button:hover {
-      background-color: #2C251C;
-      color:#DD8A66; /* ? */
-    }
-    
-    /* Контейнер для кнопки (центрирование) */
-    .button-container {
-      text-align: center;
-      margin-top: 30px;
-    }
+
+.back-button:hover {
+  background-color: var(--coral);
+  color: var(--candle);
+}
