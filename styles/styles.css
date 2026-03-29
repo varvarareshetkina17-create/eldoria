@@ -12,6 +12,7 @@
 
 body {
   background-color: var(--candle);
+  background-image:url("https://www.transparenttextures.com/patterns/paper.png");
   margin: 0;
   padding: 0;
   min-height: 100vh;
